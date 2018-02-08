@@ -1,6 +1,6 @@
 // config
 var API = 'http://localhost:4000/api/'; // API address
-var defaultPool = ''; // Default Pool ID
+var defaultPool = 'btq1'; // Default Pool ID
 
 var currentPool = defaultPool;
 
@@ -327,7 +327,7 @@ function loadMinersList() {
                 $.each(data, function (index, value) {
                     minerList += '<tr>';
                     minerList += '<td><a href="' + value.minerAddressInfoLink + '" target="_blank">' + value.miner.substring(0, 8) + ' &hellip; ' + value.miner.substring(value.miner.length - 6) + '</td>';
-                    minerList += '<td>' + _formatter(value.hashRate, 5, 'H/s') + '</td>';
+                    minerList += '<td>' + _formatter(value.hashrate, 5, 'H/s') + '</td>';
                     minerList += '<td>' + _formatter(value.sharesPerSecond, 5, 'S/s') + '</td>';
                     minerList += '</tr>';
                 });
